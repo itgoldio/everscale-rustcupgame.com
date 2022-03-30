@@ -1,0 +1,136 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "onRaceCycle",
+			"inputs": [
+				{"name":"title","type":"cell"},
+				{"name":"outputSpeed","type":"uint16"},
+				{"name":"points","type":"uint128"},
+				{"name":"lossControl","type":"bool"},
+				{"name":"random","type":"uint16"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "acceptRewardPool",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getRegions",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"address[]"}
+			]
+		},
+		{
+			"name": "getParticipants",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"owner","type":"address"},{"name":"params","type":"address"},{"components":[{"name":"title","type":"string"},{"name":"speed_modifier","type":"int16"},{"name":"acceleration_modifier","type":"int16"},{"name":"braking_modifier","type":"int16"},{"name":"control_modifier","type":"int16"}],"name":"mods","type":"tuple"},{"components":[{"name":"speed","type":"uint16"},{"name":"braking","type":"uint16"},{"name":"acceleration","type":"uint16"},{"name":"control","type":"uint16"}],"name":"specs","type":"tuple"}],"name":"value0","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getRacersInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"owner","type":"address"},{"name":"params","type":"address"},{"name":"points","type":"uint128"},{"name":"inputSpeed","type":"uint16"},{"name":"place","type":"uint8"}],"name":"value0","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getParamsEditor",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "rewardPool",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"rewardPool","type":"uint128"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_id","type":"uint32"},
+		{"key":2,"name":"_rootAddress","type":"address"}
+	],
+	"events": [
+		{
+			"name": "raceCompleteEvent",
+			"inputs": [
+				{"name":"event_type","type":"uint8"},
+				{"name":"race","type":"address"},
+				{"name":"params","type":"address[]"},
+				{"name":"points","type":"uint128[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "regionCompleteEvent",
+			"inputs": [
+				{"name":"event_type","type":"uint8"},
+				{"name":"title","type":"string"},
+				{"name":"number","type":"uint8"},
+				{"name":"pointsBefore","type":"uint128"},
+				{"name":"pointsAfter","type":"uint128"},
+				{"name":"outputSpeed","type":"uint16"},
+				{"name":"lossControl","type":"bool"},
+				{"name":"params","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "regionEvent",
+			"inputs": [
+				{"name":"event_type","type":"uint8"},
+				{"name":"regionAddr","type":"address"},
+				{"name":"regionIndex","type":"uint8"},
+				{"name":"localIndex","type":"uint8"},
+				{"name":"pointsBefore","type":"uint128"},
+				{"name":"pointsAfter","type":"uint128"},
+				{"name":"lossControl","type":"bool"},
+				{"name":"random","type":"uint16"},
+				{"name":"params","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_pseudoRandom","type":"uint16"},
+		{"name":"RACE_COMPLITE_EVENT","type":"uint8"},
+		{"name":"REGION_COMPLETE_EVENT","type":"uint8"},
+		{"name":"REGION_EVENT","type":"uint8"},
+		{"name":"_ownerMultiSig","type":"address"},
+		{"name":"_paramsEditor","type":"address"},
+		{"name":"_id","type":"uint32"},
+		{"name":"_rootAddress","type":"address"},
+		{"name":"_regions","type":"address[]"},
+		{"components":[{"name":"owner","type":"address"},{"name":"params","type":"address"},{"components":[{"name":"title","type":"string"},{"name":"speed_modifier","type":"int16"},{"name":"acceleration_modifier","type":"int16"},{"name":"braking_modifier","type":"int16"},{"name":"control_modifier","type":"int16"}],"name":"mods","type":"tuple"},{"components":[{"name":"speed","type":"uint16"},{"name":"braking","type":"uint16"},{"name":"acceleration","type":"uint16"},{"name":"control","type":"uint16"}],"name":"specs","type":"tuple"}],"name":"_participants","type":"tuple[]"},
+		{"name":"index","type":"uint8"},
+		{"name":"regionIndex","type":"uint8"},
+		{"components":[{"name":"owner","type":"address"},{"name":"params","type":"address"},{"name":"points","type":"uint128"},{"name":"inputSpeed","type":"uint16"},{"name":"place","type":"uint8"}],"name":"_racerInfo","type":"tuple[]"},
+		{"name":"rewardPool","type":"uint128"},
+		{"name":"_statusIndexCode","type":"cell"},
+		{"name":"_indexDeployValue","type":"uint128"},
+		{"name":"_activeIndexes","type":"map(address,address)"}
+	]
+}

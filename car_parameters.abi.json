@@ -1,0 +1,48 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "getInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"carName","type":"string"},
+				{"name":"nftData","type":"address"},
+				{"name":"speed","type":"uint16"},
+				{"name":"braking","type":"uint16"},
+				{"name":"acceleration","type":"uint16"},
+				{"name":"control","type":"uint32"},
+				{"name":"raceCount","type":"uint32"},
+				{"name":"firstPlaceCount","type":"uint32"},
+				{"name":"secondPlaceCount","type":"uint32"},
+				{"name":"thirdPlaceCount","type":"uint32"},
+				{"name":"index","type":"address"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_nftAddr","type":"address"},
+		{"name":"_carName","type":"string"},
+		{"name":"_speed","type":"uint16"},
+		{"name":"_braking","type":"uint16"},
+		{"name":"_acceleration","type":"uint16"},
+		{"name":"_control","type":"uint16"},
+		{"name":"_raceCount","type":"uint32"},
+		{"name":"_firstPlaceCount","type":"uint32"},
+		{"name":"_secondPlaceCount","type":"uint32"},
+		{"name":"_thirdPlaceCount","type":"uint32"},
+		{"name":"_deployValue","type":"uint128"},
+		{"name":"_indexAddr","type":"address"},
+		{"name":"_paramsEditor","type":"address"},
+		{"name":"_indexCode","type":"cell"}
+	]
+}

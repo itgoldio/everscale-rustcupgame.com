@@ -1,0 +1,81 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "participate",
+			"inputs": [
+				{"name":"car","type":"address"},
+				{"name":"style","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "isQueueActive",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"flag","type":"bool"}
+			]
+		},
+		{
+			"name": "getPlayersInQueue",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"owner","type":"address"},{"name":"params","type":"address"},{"components":[{"name":"title","type":"string"},{"name":"speed_modifier","type":"int16"},{"name":"acceleration_modifier","type":"int16"},{"name":"braking_modifier","type":"int16"},{"name":"control_modifier","type":"int16"}],"name":"mods","type":"tuple"},{"components":[{"name":"speed","type":"uint16"},{"name":"braking","type":"uint16"},{"name":"acceleration","type":"uint16"},{"name":"control","type":"uint16"}],"name":"specs","type":"tuple"}],"name":"value0","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getParticipationPrice",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"price","type":"uint128"}
+			]
+		},
+		{
+			"name": "getMaxPlayers",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"maxPlayers","type":"uint8"}
+			]
+		},
+		{
+			"name": "getModifiers",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"title","type":"string"},{"name":"speed_modifier","type":"int16"},{"name":"acceleration_modifier","type":"int16"},{"name":"braking_modifier","type":"int16"},{"name":"control_modifier","type":"int16"}],"name":"value0","type":"tuple[]"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"title","type":"string"},{"name":"speed_modifier","type":"int16"},{"name":"acceleration_modifier","type":"int16"},{"name":"braking_modifier","type":"int16"},{"name":"control_modifier","type":"int16"}],"name":"_modifiers","type":"map(uint8,tuple)"},
+		{"name":"_userQueueId","type":"uint32"},
+		{"name":"_currentUserId","type":"uint32"},
+		{"name":"_boxQueueId","type":"uint32"},
+		{"name":"_currentBoxId","type":"uint32"},
+		{"name":"callbackCount","type":"uint8"},
+		{"name":"_status","type":"bool"},
+		{"name":"_root","type":"address"},
+		{"name":"_maxPlayers","type":"uint8"},
+		{"name":"_participationPrice","type":"uint128"},
+		{"name":"_indexCode","type":"cell"},
+		{"name":"_parametersCode","type":"cell"},
+		{"name":"_trackCode","type":"cell"},
+		{"components":[{"name":"car","type":"address"},{"name":"sender","type":"address"},{"name":"params","type":"address"},{"name":"style","type":"uint8"},{"name":"crystals","type":"uint128"}],"name":"_usersQueue","type":"map(uint32,tuple)"},
+		{"components":[{"components":[{"name":"car","type":"address"},{"name":"sender","type":"address"},{"name":"params","type":"address"},{"name":"style","type":"uint8"},{"name":"crystals","type":"uint128"}],"name":"_boxPlayers","type":"map(uint8,tuple)"}],"name":"_boxesQueue","type":"map(uint32,tuple)"},
+		{"components":[{"name":"owner","type":"address"},{"name":"params","type":"address"},{"components":[{"name":"title","type":"string"},{"name":"speed_modifier","type":"int16"},{"name":"acceleration_modifier","type":"int16"},{"name":"braking_modifier","type":"int16"},{"name":"control_modifier","type":"int16"}],"name":"mods","type":"tuple"},{"components":[{"name":"speed","type":"uint16"},{"name":"braking","type":"uint16"},{"name":"acceleration","type":"uint16"},{"name":"control","type":"uint16"}],"name":"specs","type":"tuple"}],"name":"players","type":"tuple[]"}
+	]
+}
