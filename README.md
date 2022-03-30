@@ -1,6 +1,21 @@
 # 🏁RustCupGame
 
-**TODO:** add game description.
+> TODO: add shrot game description
+
+
+1. [How to play?](#how-to-play)
+1. [How it work?](#how-it-work)
+   1. [Wallet](#wallet)
+   1. [Debot](#debot)
+   1. [Queue](#queue)
+   1. [Root](#root)
+   1. [Track](#track)
+   1. [Editor](#editor)
+   1. [Car parameters](#car-parameters)
+1. [How to calculate points?](#how-to-calculate-points)
+1. [Regions](#regions)
+1. [Cars](#cars)
+1. [Economics](#economics)
 
 ## How to play?
 
@@ -17,6 +32,8 @@ or scan QR code
 ## How it work?
 
 All logic inside blockchain on smart contracts
+
+> TODO: add description
 
 ![schema](img/Diagram.png)
 
@@ -40,7 +57,7 @@ Every tracks consist random set of regions. When race on track started:
 - For every regions
 - - A random number is thrown from 1 to 100
 - - Calculate cars points score for region
-- After last region
+- When race ended:
 - - Compare cars points
 - - Distributes rewards 
 - - Update cars statistics use ``Editor`` contract
@@ -62,7 +79,6 @@ Car contains parameters:
 
 Region contains parameters:
 
-Car contains parameters:
 | Name                   | Description                                                                         |
 |------------------------|-------------------------------------------------------------------------------------|
 | **Control coefficient**| Randomness factor in the game, affects the final points on the site                 |
@@ -71,20 +87,22 @@ Car contains parameters:
 
 Car points are calculated use a formula. 
 
+> TODO: add formula 
+
 ## Regions
 
 Regions info:
-| Type    | Address                                                               |Control coefficient|Max input speed|Max output speed|
-|---------|-----------------------------------------------------------------------|-------------------|---------------|----------------|
-| **D0**  | ``0:17230bf369f4d28e9960ea5a07af15733313c36f2d83fc692cd730306165d7a1``| 30                | 90            | 90             |
-| **D30** | ``0:ffc3b7c614434368677621a385dea6610e305aad52a7082d09f90ff9c7aee091``| 15                | 60            | 60             |
-| **D60** | ``0:8a79e2e720ea73302595ea63313ec5d84ad2488e73a7a8c234721cd2b4d0a178``| 15                | 45            | 45             |
-| **D90** | ``0:ad8e5a4aec95d0821c103150fa4e7953c22b9d32cc65d8920f1917174dfe574f``|  0                | 30            | 30             |
-| **D120**| ``0:337947d04e76b762195efcee51924369cf69e9291af0591875b7e9f15957100c``| -15               | 15            | 15             |  
-| **D180**| ``0:c66fe5636a622f57c5223c097b5ec90bd7ccc8291836f03baa981b9b5f992302``| -15               | 15            | 15             |
-| **S**   | ``0:f2bfe1e91279f2b6a191e459a1af59aa2a0a451b4af4bc41ed2c1bc74ab9a8de``| -30               | 30            | 30             |
+| Type    | Name                   | Address                                                               |Control coefficient|Max input speed|Max output speed|
+|---------|------------------------|----------------------------------------------------------------------|-------------------|---------------|----------------|
+| **D0**  | Straight road          |``0:17230bf369f4d28e9960ea5a07af15733313c36f2d83fc692cd730306165d7a1``| 30                | 90            | 90             |
+| **D30** | Road turns 30 degrees  |``0:ffc3b7c614434368677621a385dea6610e305aad52a7082d09f90ff9c7aee091``| 15                | 60            | 60             |
+| **D60** | Road turns 60 degrees  |``0:8a79e2e720ea73302595ea63313ec5d84ad2488e73a7a8c234721cd2b4d0a178``| 15                | 45            | 45             |
+| **D90** | Road turns 90 degrees  |``0:ad8e5a4aec95d0821c103150fa4e7953c22b9d32cc65d8920f1917174dfe574f``|  0                | 30            | 30             |
+| **D120**| Road turns 120 degrees |``0:337947d04e76b762195efcee51924369cf69e9291af0591875b7e9f15957100c``| -15               | 15            | 15             |  
+| **D180**| Road turns 180 degrees |``0:c66fe5636a622f57c5223c097b5ec90bd7ccc8291836f03baa981b9b5f992302``| -15               | 15            | 15             |
+| **S**   | Chicane                |``0:f2bfe1e91279f2b6a191e459a1af59aa2a0a451b4af4bc41ed2c1bc74ab9a8de``| -30               | 30            | 30             |
 
-## Car parametrs
+## Cars
 | Name                  | Address                                                               | SPEED | BRAKING | ACCELERATION | CONTROL |
 |-----------------------|-----------------------------------------------------------------------|-------|---------|--------------|---------|
 | **Pussy cat**         | ``0:48fe05c7d5b0aefe9a48d43faed3b4279f302a8c979f00071048b80371e92566``| 45   | 15       | 85           | 65      |
