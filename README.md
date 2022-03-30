@@ -133,7 +133,7 @@ Regions info:
 | **1'st place:**           | 60%  (48 ever) |
 | **2'st place:**           | 30%  (24 ever) |
 | **3'st place:**           | 0%             |
-| **4'st place:**           | 0% ()          |
+| **4'st place:**           | 0%             |
 | **Platfom**               | 10%* (8 ever)  |   
 
 \* Platform paid gas fee ~4ever
