@@ -12,13 +12,13 @@ Open [debot's browser](https://ever.surf/) and run debot: ```0:645ce51da11cb1cdd
 
 or scan QR code
 
-![DebotQR](img\debotQR.jpg)
+![DebotQR](img/debotQR.jpg)
 
 ## How it work?
 
 All logic inside blockchain on smart contracts
 
-![schema](img\Diagram.png)
+![schema](img/Diagram.png)
 
 ### Wallet
 It's your wallet, that own your car NFT
