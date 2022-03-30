@@ -1,0 +1,31 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "getRegionInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"title","type":"string"},
+				{"name":"controlCoefficient","type":"int16"},
+				{"name":"maxInputSpeed","type":"uint16"},
+				{"name":"maxOutputSpeed","type":"uint16"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_title","type":"string"},
+		{"name":"_controlCoefficient","type":"int16"},
+		{"name":"_maxInputSpeed","type":"uint16"},
+		{"name":"_maxOutputSpeed","type":"uint16"}
+	]
+}
