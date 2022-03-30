@@ -87,7 +87,45 @@ Region contains parameters:
 
 Car points are calculated use a formula. 
 
-> TODO: add formula 
+_If **Max input speed** >= **Input speed**_ :
+*  _If **Max input speed** >= **SPEED**_ :
+   ```solidity
+   points = (speed * (100 + acceleration) - ((speed - inputSpeed) * 100)) / 100;
+   ```
+*  _Else_ :
+   ```solidity
+   points = (_maxInputSpeed * (100 + acceleration) - ((_maxInputSpeed - inputSpeed) * 100)) / 100;
+   ```
+_Else_:
+*  _If **Max input speed** >= **SPEED**_ :
+   ```solidity
+   points = (speed * (100 - (100 - braking) - ((inputSpeed - speed) * 100))) / 100;
+   ```
+*  _Else_ :
+   ```solidity
+   points = (_maxInputSpeed * (100 - (100 - braking) - ((inputSpeed - _maxInputSpeed) * 100))) / 100;
+   ```
+_Calculate the loss of control_ :
+```solidity
+// may be less than 0
+int16 sumOfControl = control + _controlCoefficient;
+
+if(sumOfControl < 0){
+   totalControl = 0;
+}
+else {
+   totalControl = uint16(sumOfControl);
+}
+
+if(totalControl < 100){
+   if(totalControl < random){ //random 0-100
+      if(points > 0){
+         points = points/2;
+         lossControl = true;
+      }
+   }
+}
+```
 
 ## Regions
 
