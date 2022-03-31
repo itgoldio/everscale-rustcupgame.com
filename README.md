@@ -1,6 +1,9 @@
 # 🏁RustCupGame
 
-> TODO: add shrot game description
+Buy unique racing cars as NFTs. Find rivals for a 1x1 race or 4-participants race in every man for himself mode.
+Each race takes place on a unique track with its characteristics generated at a random.
+Rustcupgame is a game with indirect control. Your task is to select and upgrade your car so that it wins the competition.
+Ready… steady... GO!
 
 
 1. [How to play?](#how-to-play)
