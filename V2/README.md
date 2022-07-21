@@ -8,17 +8,10 @@ Ready… steady... GO!__
 
 * [How to play?](#how-to-play)
 * [How it work?](#how-it-work)
-   * [Wallet](#wallet)
-   * [Debot](#debot)
-   * [Queue](#queue)
-   * [Root](#root)
-   * [Track](#track)
-   * [Editor](#editor)
-   * [Car parameters](#car-parameters)
 * [How to calculate points?](#how-to-calculate-points)
 * [Regions](#regions)
-* [Cars](#cars)
 * [Economics](#economics)
+* [More information](#more-information)
 
 ## How to play?
 
@@ -29,13 +22,6 @@ Ready… steady... GO!__
 All logic inside blockchain on smart contracts.
 
 ![schema](img/PartDiagram.png)
-
-## More information
-
-* [Lobby](docs/Lobby.md)
-* [Track](docs/Track.md)
-* [Player](docs/Player.md)
-* [Parameter](docs/Parameter.md)
 
 ## How to calculate points?
 #### Car contains parameters:
@@ -111,3 +97,10 @@ Regions info:
 | **3'st place:**           | -              |0%  
 | **4'st place:**           | -              |0% 
 | **Platfom**               | 10% (4 ever)   |10% (8 ever)
+
+## More information
+
+* [Lobby](docs/Lobby.md)
+* [Track](docs/Track.md)
+* [Player](docs/Player.md)
+* [Parameter](docs/Parameter.md)
