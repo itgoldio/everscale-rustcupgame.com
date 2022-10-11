@@ -1,0 +1,302 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"ownerPubkey","type":"uint256"},
+				{"name":"minterPubkey","type":"uint256"},
+				{"name":"managerPubkey","type":"uint256"},
+				{"name":"_trackRootAddr","type":"address"},
+				{"name":"_parameterCode","type":"cell"},
+				{"name":"_trackCode","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "mintParameter",
+			"inputs": [
+				{"name":"carNftAddr","type":"address"},
+				{"name":"carName","type":"string"},
+				{"name":"carDescription","type":"string"},
+				{"name":"speed","type":"uint8"},
+				{"name":"acceleration","type":"uint8"},
+				{"name":"braking","type":"uint8"},
+				{"name":"control","type":"uint8"},
+				{"name":"totalRaces","type":"uint32"},
+				{"name":"prizePlaces","type":"uint32[]"}
+			],
+			"outputs": [
+				{"name":"newParameter","type":"address"}
+			]
+		},
+		{
+			"name": "updateParameters",
+			"inputs": [
+				{"name":"trackId","type":"uint256"},
+				{"name":"parameters","type":"address[]"},
+				{"name":"prizePlaces","type":"uint32[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "editParameter",
+			"inputs": [
+				{"name":"parameterAddr","type":"address"},
+				{"name":"carName","type":"string"},
+				{"name":"carDescription","type":"string"},
+				{"name":"speed","type":"uint8"},
+				{"name":"acceleration","type":"uint8"},
+				{"name":"braking","type":"uint8"},
+				{"name":"control","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "burnParameter",
+			"inputs": [
+				{"name":"parameterAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "resolveParameterCodeHash",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"codeHash","type":"uint256"}
+			]
+		},
+		{
+			"name": "changeMinter",
+			"inputs": [
+				{"name":"newMinterPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeManager",
+			"inputs": [
+				{"name":"newManagerPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setParameterCode",
+			"inputs": [
+				{"name":"newParameterCode","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTrackCode",
+			"inputs": [
+				{"name":"newTrackCode","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTrackRootAddress",
+			"inputs": [
+				{"name":"newTrackRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_parameterCode","type":"cell"},
+				{"name":"_trackCode","type":"cell"},
+				{"name":"_trackRootAddr","type":"address"},
+				{"name":"_mintValue","type":"uint128"},
+				{"name":"_mintProcessingValue","type":"uint128"}
+			]
+		},
+		{
+			"name": "withdraw",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"value","type":"uint128"},
+				{"name":"bounce","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "destruct",
+			"inputs": [
+				{"name":"addr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getContractTaxValuePerUnit",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "resolveTrack",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"trackCode","type":"cell"},
+				{"name":"trackId","type":"uint256"},
+				{"name":"trackRootAddr","type":"address"}
+			],
+			"outputs": [
+				{"name":"trackAddr","type":"address"}
+			]
+		},
+		{
+			"name": "resolveParameter",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"parameterCode","type":"cell"},
+				{"name":"carNftAddr","type":"address"},
+				{"name":"parameterRootAddr","type":"address"}
+			],
+			"outputs": [
+				{"name":"parameterAddr","type":"address"}
+			]
+		},
+		{
+			"name": "manager",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "minter",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "MintParameter",
+			"inputs": [
+				{"name":"carNftAddr","type":"address"},
+				{"name":"carName","type":"string"},
+				{"name":"carDescription","type":"string"},
+				{"name":"speed","type":"uint8"},
+				{"name":"acceleration","type":"uint8"},
+				{"name":"braking","type":"uint8"},
+				{"name":"control","type":"uint8"},
+				{"name":"totalRaces","type":"uint32"},
+				{"name":"prizePlaces","type":"uint32[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "UpdateParameters",
+			"inputs": [
+				{"name":"trackId","type":"uint256"},
+				{"name":"parameters","type":"address[]"},
+				{"name":"prizePlaces","type":"uint32[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "EditParameter",
+			"inputs": [
+				{"name":"parameterAddr","type":"address"},
+				{"name":"carName","type":"string"},
+				{"name":"carDescription","type":"string"},
+				{"name":"speed","type":"uint8"},
+				{"name":"acceleration","type":"uint8"},
+				{"name":"braking","type":"uint8"},
+				{"name":"control","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "BurnParameter",
+			"inputs": [
+				{"name":"parameterAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "ChangeManager",
+			"inputs": [
+				{"name":"previousManager","type":"uint256"},
+				{"name":"newManager","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "ChangeMinter",
+			"inputs": [
+				{"name":"previousMinter","type":"uint256"},
+				{"name":"newMinter","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OwnershipTransfered",
+			"inputs": [
+				{"name":"previousKey","type":"uint256"},
+				{"name":"newOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"ownerPubkey","type":"uint256"},
+		{"name":"minterPubkey","type":"uint256"},
+		{"name":"managerPubkey","type":"uint256"},
+		{"name":"contractTaxValuePerUnit","type":"uint128"},
+		{"name":"parameterCode","type":"cell"},
+		{"name":"trackCode","type":"cell"},
+		{"name":"trackRootAddr","type":"address"}
+	]
+}

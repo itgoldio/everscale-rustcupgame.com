@@ -1,0 +1,118 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"_carName","type":"string"},
+				{"name":"_carDescription","type":"string"},
+				{"name":"_speed","type":"uint8"},
+				{"name":"_acceleration","type":"uint8"},
+				{"name":"_braking","type":"uint8"},
+				{"name":"_control","type":"uint8"},
+				{"name":"_totalRaces","type":"uint32"},
+				{"name":"_prizePlaces","type":"uint32[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateParametersByParameterRoot",
+			"inputs": [
+				{"name":"prizePlace","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "burnByParameterRoot",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "editParametersByPlayerRoot",
+			"inputs": [
+				{"name":"_carName","type":"string"},
+				{"name":"_carDescription","type":"string"},
+				{"name":"_speed","type":"uint8"},
+				{"name":"_acceleration","type":"uint8"},
+				{"name":"_braking","type":"uint8"},
+				{"name":"_control","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInfo",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_carNftAddr","type":"address"},
+				{"name":"_carName","type":"string"},
+				{"name":"_carDescription","type":"string"},
+				{"name":"_speed","type":"uint8"},
+				{"name":"_acceleration","type":"uint8"},
+				{"name":"_braking","type":"uint8"},
+				{"name":"_control","type":"uint8"},
+				{"name":"_totalRaces","type":"uint32"},
+				{"name":"_prizePlaces","type":"uint32[]"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"parameterRootAddr","type":"address"},
+		{"key":2,"name":"carNftAddr","type":"address"}
+	],
+	"events": [
+		{
+			"name": "UpdateParameter",
+			"inputs": [
+				{"name":"prizePlace","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "BurnParameter",
+			"inputs": [
+				{"name":"parameterRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "EditParameter",
+			"inputs": [
+				{"name":"carName","type":"string"},
+				{"name":"carDescription","type":"string"},
+				{"name":"speed","type":"uint8"},
+				{"name":"acceleration","type":"uint8"},
+				{"name":"braking","type":"uint8"},
+				{"name":"control","type":"uint8"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"parameterRootAddr","type":"address"},
+		{"name":"carNftAddr","type":"address"},
+		{"name":"carName","type":"string"},
+		{"name":"carDescription","type":"string"},
+		{"name":"speed","type":"uint8"},
+		{"name":"acceleration","type":"uint8"},
+		{"name":"braking","type":"uint8"},
+		{"name":"control","type":"uint8"},
+		{"name":"totalRaces","type":"uint32"},
+		{"name":"prizePlaces","type":"uint32[]"}
+	]
+}

@@ -1,0 +1,261 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"ownerPubkey","type":"uint256"},
+				{"name":"managerPubkey","type":"uint256"},
+				{"name":"_queueAddr","type":"address"},
+				{"name":"_randomGeneratorAddr","type":"address"},
+				{"name":"_formulaAddr","type":"address"},
+				{"name":"_playerRootAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_feeAccumulationAddr","type":"address"},
+				{"name":"_trackCode","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "mintTrack",
+			"inputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"description","type":"string"},{"name":"maxPlayers","type":"uint8"},{"name":"price","type":"uint128"},{"name":"minRegions","type":"uint8"},{"name":"maxRegions","type":"uint8"},{"name":"rewardSchema","type":"uint8[]"},{"name":"carName","type":"string[]"},{"name":"playerWalletAddr","type":"address[]"},{"name":"playerStatisticAddr","type":"address[]"},{"name":"carNftAddr","type":"address[]"},{"name":"carNftParametersAddr","type":"address[]"},{"name":"speed","type":"uint8[]"},{"name":"acceleration","type":"uint8[]"},{"name":"braking","type":"uint8[]"},{"name":"control","type":"uint8[]"},{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"boosters","type":"tuple[]"},{"name":"results","type":"uint256[]"}],"name":"lobby","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeManager",
+			"inputs": [
+				{"name":"newManagerPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addRegion",
+			"inputs": [
+				{"name":"id","type":"uint8"},
+				{"name":"regionName","type":"string"},
+				{"name":"vel","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "removeRegion",
+			"inputs": [
+				{"name":"id","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "resolveTrackCodeHash",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"codeHash","type":"uint256"}
+			]
+		},
+		{
+			"name": "setQueueAddress",
+			"inputs": [
+				{"name":"newQueueAddress","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setRandomGeneratorAddress",
+			"inputs": [
+				{"name":"newRandomGeneratorAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setFormulaAddress",
+			"inputs": [
+				{"name":"newFormulaAddress","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setPlayerRootAddress",
+			"inputs": [
+				{"name":"newPlayerRootAddress","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setParameterRootAddr",
+			"inputs": [
+				{"name":"newParameterRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setFeeAccumulationAddr",
+			"inputs": [
+				{"name":"newFeeAccumulationAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTrackCode",
+			"inputs": [
+				{"name":"newTrackCode","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_queueAddr","type":"address"},
+				{"name":"_randomGeneratorAddr","type":"address"},
+				{"name":"_formulaAddr","type":"address"},
+				{"name":"_playerRootAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_feeAccumulationAddr","type":"address"},
+				{"name":"_trackCode","type":"cell"},
+				{"name":"_trackSupply","type":"uint256"}
+			]
+		},
+		{
+			"name": "withdraw",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"value","type":"uint128"},
+				{"name":"bounce","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "trackDestruct",
+			"inputs": [
+				{"name":"trackAddr","type":"address"},
+				{"name":"dst","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "trackWithdraw",
+			"inputs": [
+				{"name":"value","type":"uint128"},
+				{"name":"trackAddr","type":"address"},
+				{"name":"dst","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "destruct",
+			"inputs": [
+				{"name":"addr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getContractTaxValuePerUnit",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "getRegions",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"regionName","type":"string"},{"name":"vel","type":"uint8"}],"name":"value0","type":"map(uint8,tuple)"}
+			]
+		},
+		{
+			"name": "manager",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "MintTrack",
+			"inputs": [
+				{"name":"trackAddr","type":"address"},
+				{"components":[{"name":"name","type":"string"},{"name":"description","type":"string"},{"name":"maxPlayers","type":"uint8"},{"name":"price","type":"uint128"},{"name":"minRegions","type":"uint8"},{"name":"maxRegions","type":"uint8"},{"name":"rewardSchema","type":"uint8[]"},{"name":"carName","type":"string[]"},{"name":"playerWalletAddr","type":"address[]"},{"name":"playerStatisticAddr","type":"address[]"},{"name":"carNftAddr","type":"address[]"},{"name":"carNftParametersAddr","type":"address[]"},{"name":"speed","type":"uint8[]"},{"name":"acceleration","type":"uint8[]"},{"name":"braking","type":"uint8[]"},{"name":"control","type":"uint8[]"},{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"boosters","type":"tuple[]"},{"name":"results","type":"uint256[]"}],"name":"lobby","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "ChangeManager",
+			"inputs": [
+				{"name":"previousManager","type":"uint256"},
+				{"name":"newManager","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OwnershipTransfered",
+			"inputs": [
+				{"name":"previousKey","type":"uint256"},
+				{"name":"newOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"ownerPubkey","type":"uint256"},
+		{"name":"managerPubkey","type":"uint256"},
+		{"components":[{"name":"regionName","type":"string"},{"name":"vel","type":"uint8"}],"name":"m_regions","type":"map(uint8,tuple)"},
+		{"name":"contractTaxValuePerUnit","type":"uint128"},
+		{"name":"queueAddr","type":"address"},
+		{"name":"randomGeneratorAddr","type":"address"},
+		{"name":"formulaAddr","type":"address"},
+		{"name":"playerRootAddr","type":"address"},
+		{"name":"parameterRootAddr","type":"address"},
+		{"name":"feeAccumulationAddr","type":"address"},
+		{"name":"trackCode","type":"cell"},
+		{"name":"trackSupply","type":"uint256"}
+	]
+}

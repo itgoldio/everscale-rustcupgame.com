@@ -1,0 +1,351 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"ownerPubkey","type":"uint256"},
+				{"name":"_playerCode","type":"cell"},
+				{"name":"_parameterCode","type":"cell"},
+				{"name":"_playerRootAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_nftRootAddr","type":"address"},
+				{"name":"_nftHelperAddr","type":"address"},
+				{"name":"_queueAddr","type":"address"},
+				{"name":"_collectionHelperDebotAddr","type":"address"},
+				{"name":"_participationHelperDebotAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "start",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setUserWallet",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetPlayerAddrType",
+			"inputs": [
+				{"name":"acc_type","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetConfirmCreatePlayer",
+			"inputs": [
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetPlayerRootInfo",
+			"inputs": [
+				{"name":"_playerCode","type":"cell"},
+				{"name":"_trackCode","type":"cell"},
+				{"name":"_trackRootAddr","type":"address"},
+				{"name":"_mintValue","type":"uint128"},
+				{"name":"_mintProcessingValue","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployPlayerTransaction",
+			"inputs": [
+				{"name":"msgValue","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onSuccessPlayerDeploy",
+			"inputs": [
+				{"name":"transId","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "noop",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "mainMenu",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getPlayerInfo",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetPlayerInfo",
+			"inputs": [
+				{"name":"_playerRootAddr","type":"address"},
+				{"name":"_playerWalletAddr","type":"address"},
+				{"name":"_totalPoints","type":"uint256"},
+				{"name":"_totalRaces","type":"uint32"},
+				{"name":"_prizePlaces","type":"uint32[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getLobbiesList",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getCollection",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetCollection",
+			"inputs": [
+				{"components":[{"name":"initiatorAddr","type":"address"},{"name":"print","type":"bool"},{"name":"itemAmount","type":"uint32"},{"components":[{"name":"parameterRootAddr","type":"address"},{"name":"carNftAddr","type":"address"},{"name":"carName","type":"string"},{"name":"carDescription","type":"string"},{"name":"speed","type":"uint8"},{"name":"acceleration","type":"uint8"},{"name":"braking","type":"uint8"},{"name":"control","type":"uint8"},{"name":"totalRaces","type":"uint32"},{"name":"prizePlaces","type":"uint32[]"}],"name":"collection","type":"tuple[]"}],"name":"collectionSearchRequest","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onError",
+			"inputs": [
+				{"name":"sdkError","type":"uint32"},
+				{"name":"exitCode","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotInfo",
+			"id": "0xDEB",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"string"},
+				{"name":"version","type":"string"},
+				{"name":"publisher","type":"string"},
+				{"name":"caption","type":"string"},
+				{"name":"author","type":"string"},
+				{"name":"support","type":"address"},
+				{"name":"hello","type":"string"},
+				{"name":"language","type":"string"},
+				{"name":"dabi","type":"string"},
+				{"name":"icon","type":"bytes"}
+			]
+		},
+		{
+			"name": "setIcon",
+			"inputs": [
+				{"name":"icon","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getRequiredInterfaces",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"interfaces","type":"uint256[]"}
+			]
+		},
+		{
+			"name": "setPause",
+			"inputs": [
+				{"name":"pause","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setPlayerCode",
+			"inputs": [
+				{"name":"newPlayerCode","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setParameterCode",
+			"inputs": [
+				{"name":"newParameterCode","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setPlayerRootAddr",
+			"inputs": [
+				{"name":"newPlayerRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setParameterRootAddr",
+			"inputs": [
+				{"name":"newParameterRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setNftRootAddr",
+			"inputs": [
+				{"name":"newNftRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setQueueAddr",
+			"inputs": [
+				{"name":"newQueueAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setCollectionHelperDebotAddr",
+			"inputs": [
+				{"name":"newCollectionHelperDebotAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setParticipationHelperDebotAddr",
+			"inputs": [
+				{"name":"newParticipationHelperDebotAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"ownerPubkey","type":"uint256"},
+				{"name":"_playerCode","type":"cell"},
+				{"name":"_parameterCode","type":"cell"},
+				{"name":"_playerRootAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_nftRootAddr","type":"address"},
+				{"name":"_queueAddr","type":"address"},
+				{"name":"_collectionHelperDebotAddr","type":"address"},
+				{"name":"_participationHelperDebotAddr","type":"address"}
+			]
+		},
+		{
+			"name": "resolvePlayer",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"playerCode","type":"cell"},
+				{"name":"playerWalletAddr","type":"address"},
+				{"name":"playerRootAddr","type":"address"}
+			],
+			"outputs": [
+				{"name":"playerAddr","type":"address"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotOptions",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"options","type":"uint8"},
+				{"name":"debotAbi","type":"string"},
+				{"name":"targetAbi","type":"string"},
+				{"name":"targetAddr","type":"address"}
+			]
+		},
+		{
+			"name": "setABI",
+			"inputs": [
+				{"name":"dabi","type":"string"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "OwnershipTransfered",
+			"inputs": [
+				{"name":"previousKey","type":"uint256"},
+				{"name":"newOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"m_options","type":"uint8"},
+		{"name":"m_debotAbi","type":"optional(string)"},
+		{"name":"m_targetAbi","type":"optional(string)"},
+		{"name":"m_target","type":"optional(address)"},
+		{"name":"ownerPubkey","type":"uint256"},
+		{"name":"status","type":"bool"},
+		{"components":[{"name":"walletAddr","type":"address"},{"name":"playerAddr","type":"address"}],"name":"user","type":"tuple"},
+		{"name":"playerCode","type":"cell"},
+		{"name":"parameterCode","type":"cell"},
+		{"name":"playerRootAddr","type":"address"},
+		{"name":"parameterRootAddr","type":"address"},
+		{"name":"nftRootAddr","type":"address"},
+		{"name":"nftHelperAddr","type":"address"},
+		{"name":"queueAddr","type":"address"},
+		{"name":"collectionHelperDebotAddr","type":"address"},
+		{"name":"participationHelperDebotAddr","type":"address"},
+		{"name":"_m_icon","type":"bytes"}
+	]
+}
