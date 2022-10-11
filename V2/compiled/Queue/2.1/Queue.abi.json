@@ -1,0 +1,384 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"ownerPubkey","type":"uint256"},
+				{"name":"managerPubkey","type":"uint256"},
+				{"name":"_playerCode","type":"cell"},
+				{"name":"_parameterCode","type":"cell"},
+				{"name":"_trackRootAddr","type":"address"},
+				{"name":"_playerRootAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "acceptParticipateRequest",
+			"inputs": [
+				{"name":"carNftAddr","type":"address"},
+				{"name":"boosterId","type":"uint8"},
+				{"name":"gameLobbyId","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "checkCarInLobby",
+			"inputs": [
+				{"name":"car","type":"address"},
+				{"name":"gameLobbyId","type":"uint8"}
+			],
+			"outputs": [
+				{"name":"acceptStatus","type":"bool"}
+			]
+		},
+		{
+			"name": "onGetCarNftOwner",
+			"inputs": [
+				{"name":"id","type":"uint256"},
+				{"name":"owner","type":"address"},
+				{"name":"manager","type":"address"},
+				{"name":"collection","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetCarParameters",
+			"inputs": [
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_carNftAddr","type":"address"},
+				{"name":"carName","type":"string"},
+				{"name":"_carDescription","type":"string"},
+				{"name":"speed","type":"uint8"},
+				{"name":"acceleration","type":"uint8"},
+				{"name":"braking","type":"uint8"},
+				{"name":"control","type":"uint8"},
+				{"name":"_totalRaces","type":"uint32"},
+				{"name":"_prizePlaces","type":"uint32[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addGameLobby",
+			"inputs": [
+				{"name":"id","type":"uint8"},
+				{"name":"name","type":"string"},
+				{"name":"description","type":"string"},
+				{"name":"maxPlayers","type":"uint8"},
+				{"name":"rewardSchema","type":"uint8[]"},
+				{"name":"minRegions","type":"uint8"},
+				{"name":"maxRegions","type":"uint8"},
+				{"name":"price","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "removeGameLobby",
+			"inputs": [
+				{"name":"id","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addBooster",
+			"inputs": [
+				{"name":"id","type":"uint8"},
+				{"name":"name","type":"string"},
+				{"name":"speedBooster","type":"int8"},
+				{"name":"accelerationBooster","type":"int8"},
+				{"name":"brakingBooster","type":"int8"},
+				{"name":"controlBooster","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "removeBooster",
+			"inputs": [
+				{"name":"id","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeManager",
+			"inputs": [
+				{"name":"newManagerPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "pause",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "unpause",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "clearQueue",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setPlayerCode",
+			"inputs": [
+				{"name":"newPlayerCode","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setParameterCode",
+			"inputs": [
+				{"name":"newParameterCode","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTrackRootAddr",
+			"inputs": [
+				{"name":"newTrackRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setPlayerRootAddr",
+			"inputs": [
+				{"name":"newPlayerRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setParameterRootAddr",
+			"inputs": [
+				{"name":"newParameterRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_playerCode","type":"cell"},
+				{"name":"_parameterCode","type":"cell"},
+				{"name":"_trackRootAddr","type":"address"},
+				{"name":"_playerRootAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_requestId","type":"uint256"},
+				{"components":[{"name":"carName","type":"string"},{"name":"playerWalletAddr","type":"address"},{"name":"playerStatisticAddr","type":"address"},{"name":"carNftAddr","type":"address"},{"name":"carNftParametersAddr","type":"address"},{"name":"speed","type":"uint8"},{"name":"acceleration","type":"uint8"},{"name":"braking","type":"uint8"},{"name":"control","type":"uint8"},{"name":"gameLobbyId","type":"uint8"},{"name":"boosterId","type":"uint8"}],"name":"_m_queue","type":"map(uint256,tuple)"}
+			]
+		},
+		{
+			"name": "withdraw",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"value","type":"uint128"},
+				{"name":"bounce","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "destruct",
+			"inputs": [
+				{"name":"addr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "status",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"bool"}
+			]
+		},
+		{
+			"name": "getContractTaxValuePerUnit",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "resolveTrack",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"trackCode","type":"cell"},
+				{"name":"trackId","type":"uint256"},
+				{"name":"trackRootAddr","type":"address"}
+			],
+			"outputs": [
+				{"name":"trackAddr","type":"address"}
+			]
+		},
+		{
+			"name": "resolveParameter",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"parameterCode","type":"cell"},
+				{"name":"carNftAddr","type":"address"},
+				{"name":"parameterRootAddr","type":"address"}
+			],
+			"outputs": [
+				{"name":"parameterAddr","type":"address"}
+			]
+		},
+		{
+			"name": "resolvePlayer",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"playerCode","type":"cell"},
+				{"name":"playerWalletAddr","type":"address"},
+				{"name":"playerRootAddr","type":"address"}
+			],
+			"outputs": [
+				{"name":"playerAddr","type":"address"}
+			]
+		},
+		{
+			"name": "getGameLobbies",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"description","type":"string"},{"name":"maxPlayers","type":"uint8"},{"name":"price","type":"uint128"},{"name":"minRegions","type":"uint8"},{"name":"maxRegions","type":"uint8"},{"name":"rewardSchema","type":"uint8[]"},{"name":"carName","type":"string[]"},{"name":"playerWalletAddr","type":"address[]"},{"name":"playerStatisticAddr","type":"address[]"},{"name":"carNftAddr","type":"address[]"},{"name":"carNftParametersAddr","type":"address[]"},{"name":"speed","type":"uint8[]"},{"name":"acceleration","type":"uint8[]"},{"name":"braking","type":"uint8[]"},{"name":"control","type":"uint8[]"},{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"boosters","type":"tuple[]"},{"name":"results","type":"uint256[]"}],"name":"value0","type":"map(uint8,tuple)"}
+			]
+		},
+		{
+			"name": "getBoosters",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"value0","type":"map(uint8,tuple)"}
+			]
+		},
+		{
+			"name": "manager",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "NewParticipateRequest",
+			"inputs": [
+				{"name":"playerWalletAddr","type":"address"},
+				{"name":"playerStatisticAddr","type":"address"},
+				{"name":"carNftAddr","type":"address"},
+				{"name":"boosterId","type":"uint8"},
+				{"name":"gameLobbyId","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "LobbyReady",
+			"inputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"description","type":"string"},{"name":"maxPlayers","type":"uint8"},{"name":"price","type":"uint128"},{"name":"minRegions","type":"uint8"},{"name":"maxRegions","type":"uint8"},{"name":"rewardSchema","type":"uint8[]"},{"name":"carName","type":"string[]"},{"name":"playerWalletAddr","type":"address[]"},{"name":"playerStatisticAddr","type":"address[]"},{"name":"carNftAddr","type":"address[]"},{"name":"carNftParametersAddr","type":"address[]"},{"name":"speed","type":"uint8[]"},{"name":"acceleration","type":"uint8[]"},{"name":"braking","type":"uint8[]"},{"name":"control","type":"uint8[]"},{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"boosters","type":"tuple[]"},{"name":"results","type":"uint256[]"}],"name":"lobby","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Paused",
+			"inputs": [
+				{"name":"manager","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Unpaused",
+			"inputs": [
+				{"name":"manager","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "ChangeManager",
+			"inputs": [
+				{"name":"previousManager","type":"uint256"},
+				{"name":"newManager","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OwnershipTransfered",
+			"inputs": [
+				{"name":"previousKey","type":"uint256"},
+				{"name":"newOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"ownerPubkey","type":"uint256"},
+		{"name":"managerPubkey","type":"uint256"},
+		{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"m_boosters","type":"map(uint8,tuple)"},
+		{"components":[{"name":"name","type":"string"},{"name":"description","type":"string"},{"name":"maxPlayers","type":"uint8"},{"name":"price","type":"uint128"},{"name":"minRegions","type":"uint8"},{"name":"maxRegions","type":"uint8"},{"name":"rewardSchema","type":"uint8[]"},{"name":"carName","type":"string[]"},{"name":"playerWalletAddr","type":"address[]"},{"name":"playerStatisticAddr","type":"address[]"},{"name":"carNftAddr","type":"address[]"},{"name":"carNftParametersAddr","type":"address[]"},{"name":"speed","type":"uint8[]"},{"name":"acceleration","type":"uint8[]"},{"name":"braking","type":"uint8[]"},{"name":"control","type":"uint8[]"},{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"boosters","type":"tuple[]"},{"name":"results","type":"uint256[]"}],"name":"m_lobbies","type":"map(uint8,tuple)"},
+		{"name":"contractTaxValuePerUnit","type":"uint128"},
+		{"name":"paused","type":"bool"},
+		{"name":"playerCode","type":"cell"},
+		{"name":"parameterCode","type":"cell"},
+		{"name":"trackRootAddr","type":"address"},
+		{"name":"playerRootAddr","type":"address"},
+		{"name":"parameterRootAddr","type":"address"},
+		{"name":"requestId","type":"uint256"},
+		{"components":[{"name":"carName","type":"string"},{"name":"playerWalletAddr","type":"address"},{"name":"playerStatisticAddr","type":"address"},{"name":"carNftAddr","type":"address"},{"name":"carNftParametersAddr","type":"address"},{"name":"speed","type":"uint8"},{"name":"acceleration","type":"uint8"},{"name":"braking","type":"uint8"},{"name":"control","type":"uint8"},{"name":"gameLobbyId","type":"uint8"},{"name":"boosterId","type":"uint8"}],"name":"m_queue","type":"map(uint256,tuple)"},
+		{"name":"m_carNftAddrToRequestId","type":"map(address,uint256)"},
+		{"name":"m_carParameterAddrToRequestId","type":"map(address,uint256)"}
+	]
+}

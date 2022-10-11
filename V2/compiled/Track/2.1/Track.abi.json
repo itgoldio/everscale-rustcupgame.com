@@ -1,0 +1,182 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"_formulaAddr","type":"address"},
+				{"name":"_randomGeneratorAddr","type":"address"},
+				{"name":"_playerRootAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_feeAccumulationAddr","type":"address"},
+				{"components":[{"name":"regionName","type":"string"},{"name":"vel","type":"uint8"}],"name":"_regions","type":"tuple[]"},
+				{"components":[{"name":"name","type":"string"},{"name":"description","type":"string"},{"name":"maxPlayers","type":"uint8"},{"name":"price","type":"uint128"},{"name":"minRegions","type":"uint8"},{"name":"maxRegions","type":"uint8"},{"name":"rewardSchema","type":"uint8[]"},{"name":"carName","type":"string[]"},{"name":"playerWalletAddr","type":"address[]"},{"name":"playerStatisticAddr","type":"address[]"},{"name":"carNftAddr","type":"address[]"},{"name":"carNftParametersAddr","type":"address[]"},{"name":"speed","type":"uint8[]"},{"name":"acceleration","type":"uint8[]"},{"name":"braking","type":"uint8[]"},{"name":"control","type":"uint8[]"},{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"boosters","type":"tuple[]"},{"name":"results","type":"uint256[]"}],"name":"_lobby","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetRandomRegionsCount",
+			"inputs": [
+				{"name":"randoms","type":"uint8[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetRandomRegionsIndexes",
+			"inputs": [
+				{"name":"randoms","type":"uint8[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetRandomRegionsDifficulties",
+			"inputs": [
+				{"name":"randoms","type":"uint8[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "nextRegion",
+			"inputs": [
+				{"name":"totalPoints","type":"uint256[]"},
+				{"name":"lastVel","type":"uint8"},
+				{"name":"controlLosses","type":"bool[]"},
+				{"name":"regionNumber","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "paymentRewards",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_trackRootAddr","type":"address"},
+				{"name":"_trackId","type":"uint256"},
+				{"name":"_formulaAddr","type":"address"},
+				{"name":"_randomGeneratorAddr","type":"address"},
+				{"name":"_playerRootAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_feeAccumulationAddr","type":"address"},
+				{"name":"_regionIndexes","type":"uint8[]"},
+				{"name":"_regionDifficulties","type":"uint8[]"},
+				{"components":[{"name":"name","type":"string"},{"name":"description","type":"string"},{"name":"maxPlayers","type":"uint8"},{"name":"price","type":"uint128"},{"name":"minRegions","type":"uint8"},{"name":"maxRegions","type":"uint8"},{"name":"rewardSchema","type":"uint8[]"},{"name":"carName","type":"string[]"},{"name":"playerWalletAddr","type":"address[]"},{"name":"playerStatisticAddr","type":"address[]"},{"name":"carNftAddr","type":"address[]"},{"name":"carNftParametersAddr","type":"address[]"},{"name":"speed","type":"uint8[]"},{"name":"acceleration","type":"uint8[]"},{"name":"braking","type":"uint8[]"},{"name":"control","type":"uint8[]"},{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"boosters","type":"tuple[]"},{"name":"results","type":"uint256[]"}],"name":"_lobby","type":"tuple"},
+				{"components":[{"name":"regionName","type":"string"},{"name":"vel","type":"uint8"}],"name":"_regions","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "destructByRoot",
+			"inputs": [
+				{"name":"dst","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdrawByRoot",
+			"inputs": [
+				{"name":"value","type":"uint128"},
+				{"name":"dst","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdraw",
+			"inputs": [
+				{"name":"dst","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"trackRootAddr","type":"address"},
+		{"key":2,"name":"trackId","type":"uint256"}
+	],
+	"events": [
+		{
+			"name": "OnGetRandomRegionsCount",
+			"inputs": [
+				{"name":"random","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OnGetRandomRegionIndexes",
+			"inputs": [
+				{"name":"randoms","type":"uint8[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OnGetRandomRegionsDifficulties",
+			"inputs": [
+				{"name":"randoms","type":"uint8[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "RegionComplite",
+			"inputs": [
+				{"name":"beforePoints","type":"uint256[]"},
+				{"name":"afterPoints","type":"uint256[]"},
+				{"name":"controlLosses","type":"bool[]"},
+				{"name":"regionDifficulty","type":"uint8"},
+				{"name":"regionNumber","type":"uint8"},
+				{"components":[{"name":"regionName","type":"string"},{"name":"vel","type":"uint8"}],"name":"region","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "TrackComplite",
+			"inputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"description","type":"string"},{"name":"maxPlayers","type":"uint8"},{"name":"price","type":"uint128"},{"name":"minRegions","type":"uint8"},{"name":"maxRegions","type":"uint8"},{"name":"rewardSchema","type":"uint8[]"},{"name":"carName","type":"string[]"},{"name":"playerWalletAddr","type":"address[]"},{"name":"playerStatisticAddr","type":"address[]"},{"name":"carNftAddr","type":"address[]"},{"name":"carNftParametersAddr","type":"address[]"},{"name":"speed","type":"uint8[]"},{"name":"acceleration","type":"uint8[]"},{"name":"braking","type":"uint8[]"},{"name":"control","type":"uint8[]"},{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"boosters","type":"tuple[]"},{"name":"results","type":"uint256[]"}],"name":"lobby","type":"tuple"},
+				{"name":"carRewards","type":"map(address,uint128)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "BurnByRoot",
+			"inputs": [
+				{"name":"trackRootAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"trackRootAddr","type":"address"},
+		{"name":"trackId","type":"uint256"},
+		{"name":"formulaAddr","type":"address"},
+		{"name":"randomGeneratorAddr","type":"address"},
+		{"name":"playerRootAddr","type":"address"},
+		{"name":"parameterRootAddr","type":"address"},
+		{"name":"feeAccumulationAddr","type":"address"},
+		{"components":[{"name":"name","type":"string"},{"name":"description","type":"string"},{"name":"maxPlayers","type":"uint8"},{"name":"price","type":"uint128"},{"name":"minRegions","type":"uint8"},{"name":"maxRegions","type":"uint8"},{"name":"rewardSchema","type":"uint8[]"},{"name":"carName","type":"string[]"},{"name":"playerWalletAddr","type":"address[]"},{"name":"playerStatisticAddr","type":"address[]"},{"name":"carNftAddr","type":"address[]"},{"name":"carNftParametersAddr","type":"address[]"},{"name":"speed","type":"uint8[]"},{"name":"acceleration","type":"uint8[]"},{"name":"braking","type":"uint8[]"},{"name":"control","type":"uint8[]"},{"components":[{"name":"name","type":"string"},{"name":"speedBooster","type":"int8"},{"name":"accelerationBooster","type":"int8"},{"name":"brakingBooster","type":"int8"},{"name":"controlBooster","type":"int8"}],"name":"boosters","type":"tuple[]"},{"name":"results","type":"uint256[]"}],"name":"lobby","type":"tuple"},
+		{"components":[{"name":"regionName","type":"string"},{"name":"vel","type":"uint8"}],"name":"regions","type":"tuple[]"},
+		{"name":"regionIndexes","type":"uint8[]"},
+		{"name":"regionDifficulties","type":"uint8[]"}
+	]
+}

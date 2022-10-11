@@ -1,0 +1,215 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"ownerPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "start",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "init",
+			"inputs": [
+				{"name":"_parameterCode","type":"cell"},
+				{"name":"_mainDebotAddr","type":"address"},
+				{"name":"_participationHelperDebotAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_nftHelperAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "searchCollection",
+			"inputs": [
+				{"name":"initiatorId","type":"uint8"},
+				{"name":"nftRootAddr","type":"address"},
+				{"name":"ownerAddr","type":"address"},
+				{"name":"print","type":"bool"},
+				{"name":"_parameterCode","type":"cell"},
+				{"name":"_mainDebotAddr","type":"address"},
+				{"name":"_participationHelperDebotAddr","type":"address"},
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_nftHelperAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onResolveCodeHashIndex",
+			"inputs": [
+				{"name":"indexCodeHash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetIndexesByHash",
+			"inputs": [
+				{"components":[{"name":"id","type":"address"},{"name":"data","type":"cell"}],"name":"accounts","type":"tuple[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetIndexesInfo",
+			"inputs": [
+				{"name":"collection","type":"address"},
+				{"name":"owner","type":"address"},
+				{"name":"nft","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetParameterType",
+			"inputs": [
+				{"name":"acc_type","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetParametersInfo",
+			"inputs": [
+				{"name":"_parameterRootAddr","type":"address"},
+				{"name":"_carNftAddr","type":"address"},
+				{"name":"_carName","type":"string"},
+				{"name":"_carDescription","type":"string"},
+				{"name":"_speed","type":"uint8"},
+				{"name":"_acceleration","type":"uint8"},
+				{"name":"_braking","type":"uint8"},
+				{"name":"_control","type":"uint8"},
+				{"name":"_totalRaces","type":"uint32"},
+				{"name":"_prizePlaces","type":"uint32[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onError",
+			"inputs": [
+				{"name":"sdkError","type":"uint32"},
+				{"name":"exitCode","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotInfo",
+			"id": "0xDEB",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"string"},
+				{"name":"version","type":"string"},
+				{"name":"publisher","type":"string"},
+				{"name":"caption","type":"string"},
+				{"name":"author","type":"string"},
+				{"name":"support","type":"address"},
+				{"name":"hello","type":"string"},
+				{"name":"language","type":"string"},
+				{"name":"dabi","type":"string"},
+				{"name":"icon","type":"bytes"}
+			]
+		},
+		{
+			"name": "getRequiredInterfaces",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"interfaces","type":"uint256[]"}
+			]
+		},
+		{
+			"name": "resolveParameter",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"parameterCode","type":"cell"},
+				{"name":"carNftAddr","type":"address"},
+				{"name":"parameterRootAddr","type":"address"}
+			],
+			"outputs": [
+				{"name":"parameterAddr","type":"address"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotOptions",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"options","type":"uint8"},
+				{"name":"debotAbi","type":"string"},
+				{"name":"targetAbi","type":"string"},
+				{"name":"targetAddr","type":"address"}
+			]
+		},
+		{
+			"name": "setABI",
+			"inputs": [
+				{"name":"dabi","type":"string"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "OwnershipTransfered",
+			"inputs": [
+				{"name":"previousKey","type":"uint256"},
+				{"name":"newOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"m_options","type":"uint8"},
+		{"name":"m_debotAbi","type":"optional(string)"},
+		{"name":"m_targetAbi","type":"optional(string)"},
+		{"name":"m_target","type":"optional(address)"},
+		{"name":"ownerPubkey","type":"uint256"},
+		{"name":"mainDebotAddr","type":"address"},
+		{"name":"participationHelperDebotAddr","type":"address"},
+		{"components":[{"name":"initiatorAddr","type":"address"},{"name":"print","type":"bool"},{"name":"itemAmount","type":"uint32"},{"components":[{"name":"parameterRootAddr","type":"address"},{"name":"carNftAddr","type":"address"},{"name":"carName","type":"string"},{"name":"carDescription","type":"string"},{"name":"speed","type":"uint8"},{"name":"acceleration","type":"uint8"},{"name":"braking","type":"uint8"},{"name":"control","type":"uint8"},{"name":"totalRaces","type":"uint32"},{"name":"prizePlaces","type":"uint32[]"}],"name":"collection","type":"tuple[]"}],"name":"collectionSearchRequest","type":"tuple"},
+		{"name":"parameterCode","type":"cell"},
+		{"name":"parameterRootAddr","type":"address"},
+		{"name":"nftHelperAddr","type":"address"},
+		{"name":"isInit","type":"bool"},
+		{"name":"parametersCheckCounter","type":"uint8"},
+		{"name":"parametersBuffer","type":"address[]"}
+	]
+}

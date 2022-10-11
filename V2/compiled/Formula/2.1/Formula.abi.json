@@ -1,0 +1,90 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"ownerPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "calculate",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"components":[{"name":"regionName","type":"string"},{"name":"vel","type":"uint8"}],"name":"region","type":"tuple"},
+				{"name":"playersCount","type":"uint8"},
+				{"name":"speed","type":"uint8[]"},
+				{"name":"acceleration","type":"uint8[]"},
+				{"name":"braking","type":"uint8[]"},
+				{"name":"control","type":"uint8[]"},
+				{"name":"lastVel","type":"uint8"},
+				{"name":"random","type":"uint8"},
+				{"name":"regionNumber","type":"uint8"},
+				{"name":"isLastRegion","type":"bool"}
+			],
+			"outputs": [
+				{"name":"totalPoints","type":"uint256[]"},
+				{"name":"currentVel","type":"uint8"},
+				{"name":"controlLosses","type":"bool[]"},
+				{"name":"currentRegionNumber","type":"uint8"}
+			]
+		},
+		{
+			"name": "withdraw",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"value","type":"uint128"},
+				{"name":"bounce","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "destruct",
+			"inputs": [
+				{"name":"addr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newPubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "OwnershipTransfered",
+			"inputs": [
+				{"name":"previousKey","type":"uint256"},
+				{"name":"newOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"ownerPubkey","type":"uint256"}
+	]
+}
